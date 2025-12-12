@@ -1,0 +1,115 @@
+import random
+import tkinter as tk
+
+dilekler = ["Yeni yıl kalbine merhem, ruhuna huzur olsun.",
+    "2026’da en çok ihtiyacın olan insan tam zamanında karşına çıksın.",
+    "Geçmişin acıları geride kalsın, yaraların çiçek açsın.",
+    "Her sabah uyandığında “Bugün de yanındayım” diyecek bir kalbin olsun.",
+    "Yeni yıl sana hak ettiğin sevgiyi, şefkati ve kucak dolusu mutluluğu getirsin.",
+    "İçindeki çocuk yeniden oyun oynayabilsin, hiç büyümesin.",
+    "2026, kırgınlıkların bittiği, yeni umutların doğduğu yıl olsun.",
+    "En karanlık gecende bile yıldızların seni bulsun.",
+    "Kalbin hep “iyi ki”lerle dolsun, hiç “keşke” demeyesin.",
+    "Yeni yılda kendine verdiğin sözleri tutabildiğin en güzel yıl olsun.",
+    "Sevdiklerinle geçirdiğin her saniye ömre bedel olsun.",
+    "2026 sana “Sen çok kıymetlisin” dedirten anlar yaşatsın.",
+    "Yüreğindeki fırtınalar dursun, yerini sakin bir denize bıraksın.",
+    "Her düştüğünde elinden tutan bir dostun, sırtını dayayacak bir sevgilin olsun.",
+    "Yeni yıl sana kaybettiğin kendinden bir parça geri versin.",
+    "2026’da gözyaşların sadece mutluluktan aksın.",
+    "İçindeki ışık hiç sönmesin, karanlıkları aydınlatmaya devam etsin.",
+    "Yeni yıl sana “Artık korkmuyorum” dedirtecek güç versin.",
+    "Kalbinin en güzel şarkısı 2026’da çalsın.",
+    "En derin yaraların bile zamanla en güzel hikâyene dönüşsün.",
+    "2026 sana yeniden âşık olmayı öğretsin; önce kendine, sonra hayata.",
+    "Her dua ettiğinde bir mucize kapını çalsın.",
+    "Yeni yıl sana hak ettiğin huzurla sarılsın, sıkı sıkı bırakmasın.",
+    "2026’da kendini en çok seven insan sen ol.",
+    "Ve en önemlisi… yeni yıl sana “İyi ki varsın” dedirtsin, her sabah.",
+    "2026’da telefonun şarjı %1’deyken hiç kapanmasın, mucize bu ya!",
+    "Yeni yılda her diyetine başladığında biri sana baklava ikram etsin… ve sen yemeyi reddet!",
+    "Zengin bir amcanın varlığını öğren ve tam yılbaşında mirasın sana kalması… amca daha yaşıyor ama olsun.",
+    "2026’da her “birazdan kalkarım” dediğinde gerçekten kalkabilesin.",
+    "Yeni yıl sana sınırsız internet + sonsuz bakiye + bitmeyen patates kızartması versin.",
+    "Alarmın hep “5 dakika daha” tuşuna basmadan kendi kendine kapansın.",
+    "2026’da her selfie’nde filtreye ihtiyacın olmasın, doğarken Photoshop’lu doğmuş gibi ol.",
+    "Yolda yürürken kuşlar sana sıçmasın, sıçarlarsa en azından piyango bileti tutsun.",
+    "Yeni yılda her “son bir bölüm” dediğinde dizi gerçekten bitsin, 9 sezon uzamasın.",
+    "İnstagram’da attığın hikâyeyi yanlış kişiye gönderdiğinde otomatik silinsin.",
+    "2026’da her kahve içtiğinde 500 kalori yak, bilim bunu henüz bilmiyor ama olsun.",
+    "Yeni yıl sana “otomatik tatlı ye, kilo alma” yeteneği versin.",
+    "Metroda her zaman oturacak yer bul, ayakta kalanlar senin düşmanın olsun.",
+    "WhatsApp’ta “yazıyor…” gördüğünde karşı taraf gerçekten 3 saniyede yazsın, 2 saat düşünmesin.",
+    "2026’da her “yarın başlarım” dediğin şey gerçekten yarın başlasın.",
+    "Yeni yılda her sokakta bedava Wi-Fi, her köşe başında dönerci olsun.",
+    "Kaybolduğun her yerde taksi bul, üstelik taksici “Abi para almayayım” desin.",
+    "2026’da her maçta tuttuğun takım kazansın, Fenerbahçe-Beşiktaş derbisinde ikisi de senin olsun.",
+    "Yeni yıl sana “gece 3’te acıkmama” super gücü versin.",
+    "Her “birazdan uyurum” dediğinde gerçekten uyuyabilesin, 4 saat telefonla oyalanma.",
+    "2026’da her yaptığın espriye millet kahkahalarla gülsün, kimse “aha çok komik” deyip surat asmasın.",
+    "Yeni yılda dolmuşta para üstü hep tam çıksın, şoför “bozuk yok” demesin.",
+    "Her yılbaşı dileğin tutsun… hatta bu dilek bile tutsun da 48 tane daha tutsun!",
+    "2026’da her selfie çubuğun kendi kendine uzasın, kimse “biraz sola” demesin.",]
+
+def dilek_sec():
+    dilek = random.choice(dilekler)
+    dilek_label.config(text=dilek) 
+
+
+pencere = tk.Tk()
+pencere.title(" Yılbaşı Dilek Kitabı ")
+pencere_genislik = 800
+pencere_yukseklik = 500
+pencere.geometry(f"{pencere_genislik}x{pencere_yukseklik}")
+
+CANLI_KIRMIZI = "#FF0000"
+SAF_BEYAZ = "#FFFFFF"
+PARLAK_ALTIN = "#FFC400"
+
+pencere.configure(bg=CANLI_KIRMIZI)
+
+kar_canvas = tk.Canvas(pencere, width=pencere_genislik, height=pencere_yukseklik,  bg=CANLI_KIRMIZI, highlightthickness=0)
+kar_canvas.place(x=0, y=0) 
+
+
+tk.Label(pencere, text="🌟 YENİ YIL DİLEK KİTABI 🌟", font=("Georgia", 30, "bold"),
+         fg=PARLAK_ALTIN, 
+         bg=CANLI_KIRMIZI).pack(pady=30)
+
+
+dilek_label = tk.Label(pencere, text="Butona bas, yılbaşı dileğin gelsin!", fg=CANLI_KIRMIZI, bg=SAF_BEYAZ, font=("Arial", 18), wraplength=600,
+justify="center", relief="ridge", bd=10, highlightbackground=PARLAK_ALTIN, highlightthickness=3, pady=30, height=6)
+
+dilek_label.pack(pady=20, padx=50, fill="x")
+
+buton = tk.Button(pencere, text="DİLEK ZARFINI AÇ ✉️", font=("Arial", 20, "bold"), bg=PARLAK_ALTIN, fg=CANLI_KIRMIZI, activebackground=SAF_BEYAZ,
+activeforeground=CANLI_KIRMIZI, command=dilek_sec, relief="raised", height=2, width=22)
+buton.pack(pady=30)
+
+
+def kar():
+
+    for _ in range(7): 
+       
+        x = random.randint(0, pencere_genislik)
+        size = random.randint(16, 26)
+    
+        snow = kar_canvas.create_text(x, 0, text="❄",   font=("Arial", size),  fill=SAF_BEYAZ)
+        def dus(s=snow):
+            
+            kar_canvas.move(s, random.randint(-2, 2), 5) 
+            
+            if kar_canvas.coords(s)[1] < pencere_yukseklik:
+                pencere.after(100, lambda: dus(s))
+
+            else:
+                kar_canvas.delete(s)
+        
+        dus()
+        
+    pencere.after(500, kar) 
+
+
+dilek_sec()
+kar() 
+pencere.mainloop()
