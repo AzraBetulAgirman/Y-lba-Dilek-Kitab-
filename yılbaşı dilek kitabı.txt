@@ -62,28 +62,28 @@ pencere_genislik = 800
 pencere_yukseklik = 500
 pencere.geometry(f"{pencere_genislik}x{pencere_yukseklik}")
 
-CANLI_KIRMIZI = "#FF0000"
-SAF_BEYAZ = "#FFFFFF"
-PARLAK_ALTIN = "#FFC400"
+kirmizi = "#FF0000"
+beyaz2 = "#FFFFFF"
+altin = "#FFC400"
 
-pencere.configure(bg=CANLI_KIRMIZI)
+pencere.configure(bg=kirmizi)
 
-kar_canvas = tk.Canvas(pencere, width=pencere_genislik, height=pencere_yukseklik,  bg=CANLI_KIRMIZI, highlightthickness=0)
+kar_canvas = tk.Canvas(pencere, width=pencere_genislik, height=pencere_yukseklik,  bg=kirmizi, highlightthickness=0)
 kar_canvas.place(x=0, y=0) 
 
 
 tk.Label(pencere, text="🌟 YENİ YIL DİLEK KİTABI 🌟", font=("Georgia", 30, "bold"),
-         fg=PARLAK_ALTIN, 
-         bg=CANLI_KIRMIZI).pack(pady=30)
+         fg=altin, 
+         bg=kirmizi).pack(pady=30)
 
 
-dilek_label = tk.Label(pencere, text="Butona bas, yılbaşı dileğin gelsin!", fg=CANLI_KIRMIZI, bg=SAF_BEYAZ, font=("Arial", 18), wraplength=600,
-justify="center", relief="ridge", bd=10, highlightbackground=PARLAK_ALTIN, highlightthickness=3, pady=30, height=6)
+dilek_label = tk.Label(pencere, text="Butona bas, yılbaşı dileğin gelsin!", fg=kirmizi, bg=beyaz2, font=("Arial", 18), wraplength=600,
+justify="center", relief="ridge", bd=10, highlightbackground=altin, highlightthickness=3, pady=30, height=6)
 
 dilek_label.pack(pady=20, padx=50, fill="x")
 
-buton = tk.Button(pencere, text="DİLEK ZARFINI AÇ ✉️", font=("Arial", 20, "bold"), bg=PARLAK_ALTIN, fg=CANLI_KIRMIZI, activebackground=SAF_BEYAZ,
-activeforeground=CANLI_KIRMIZI, command=dilek_sec, relief="raised", height=2, width=22)
+buton = tk.Button(pencere, text="DİLEK ZARFINI AÇ ✉️", font=("Arial", 20, "bold"), bg=altin, fg=kirmizi, activebackground=beyaz2,
+activeforeground=kirmizi, command=dilek_sec, relief="raised", height=2, width=22)
 buton.pack(pady=30)
 
 
@@ -94,7 +94,7 @@ def kar():
         x = random.randint(0, pencere_genislik)
         size = random.randint(16, 26)
     
-        snow = kar_canvas.create_text(x, 0, text="❄",   font=("Arial", size),  fill=SAF_BEYAZ)
+        snow = kar_canvas.create_text(x, 0, text="❄",   font=("Arial", size),  fill=beyaz2)
         def dus(s=snow):
             
             kar_canvas.move(s, random.randint(-2, 2), 5) 
